@@ -8,15 +8,23 @@ interface TextProps {
   fontSize?: FontSize;
   fontWeight?: FontWeight;
   color?: Color;
+  style?: React.CSSProperties;
 }
 
 const Text: React.FC<TextProps> = (props) => {
-  const StyledText = styled.p((props: TextProps) => ({
+  console.log(props.style);
+  const StyledText = styled.span((props: TextProps) => ({
+    padding: "0px",
+    margin: "0px",
     fontSize: font.fontSizes[props.fontSize || "medium"],
     fontWeight: font.fontWeights[props.fontWeight || "medium"],
-    color: color.colors[props.color || "regular"],
+    color: color[props.color || "regular"],
   }));
-  return <StyledText {...props}>{props.children}</StyledText>;
+  return (
+    <StyledText {...props} style={props.style}>
+      {props.children}
+    </StyledText>
+  );
 };
 
 export default Text;
