@@ -6,13 +6,14 @@ import colors from '../../theme/colors';
 
 import Text from '../Text';
 
-const SidebarHeader = () => {
+const SidebarHeader: React.FC = () => {
   const SideBarHeader = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     height: 55px;
     display: flex;
     align-items: center;
     padding: 0em 1.5rem;
+    margin-bottom: 0.6rem;
   `;
 
   const ProfileIcon = styled.div`

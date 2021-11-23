@@ -1,5 +1,6 @@
-declare module "feather-icons-react" {
-  import { Component } from "react";
+declare module 'feather-icons-react' {
+  import { Component } from 'react';
+
   interface Props {
     icon: string;
     size: string;

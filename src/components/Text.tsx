@@ -1,8 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
+/* eslint-disable react/require-default-props */
+import React from 'react';
+import styled from '@emotion/styled';
 
-import color, { Color } from "../theme/colors";
-import font, { FontSize, FontWeight } from "../theme/fonts";
+import color, { Color } from '../theme/colors';
+import font, { FontSize, FontWeight } from '../theme/fonts';
 
 interface TextProps {
   fontSize?: FontSize;
@@ -11,18 +12,18 @@ interface TextProps {
   style?: React.CSSProperties;
 }
 
-const Text: React.FC<TextProps> = (props) => {
-  console.log(props.style);
-  const StyledText = styled.span((props: TextProps) => ({
-    padding: "0px",
-    margin: "0px",
-    fontSize: font.fontSizes[props.fontSize || "medium"],
-    fontWeight: font.fontWeights[props.fontWeight || "medium"],
-    color: color[props.color || "regular"],
+const Text: React.FC<TextProps> = ({ style, children, ...props }) => {
+  const StyledText = styled.span((styleProps: TextProps) => ({
+    padding: '0px',
+    margin: '0px',
+    fontSize: font.fontSizes[styleProps.fontSize || 'medium'],
+    fontWeight: font.fontWeights[styleProps.fontWeight || 'medium'],
+    color: color[styleProps.color || 'regular'],
   }));
   return (
-    <StyledText {...props} style={props.style}>
-      {props.children}
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <StyledText {...props} style={style}>
+      {children}
     </StyledText>
   );
 };

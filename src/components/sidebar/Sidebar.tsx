@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import FeatherIcon from 'feather-icons-react';
 
-import colors from '../../theme/colors';
-import Text from '../Text';
 import SidebarHeader from './SidebarHeader';
+import MenuItem from './MenuItem';
 
 const Sidebar: React.FC = () => {
   const SideBar = styled.div`
@@ -16,6 +14,10 @@ const Sidebar: React.FC = () => {
   return (
     <SideBar>
       <SidebarHeader />
+      <MenuItem />
+      <MenuItem />
+      <MenuItem />
+      <MenuItem />
     </SideBar>
   );
 };

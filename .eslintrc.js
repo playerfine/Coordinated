@@ -27,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/require-default-props': [0],
     'react/function-component-definition': [
       2,
       {

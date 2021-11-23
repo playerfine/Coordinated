@@ -1,28 +1,22 @@
 export type FontSize =
-  | "extraSmall"
-  | "smaller"
-  | "small"
-  | "medium"
-  | "large"
-  | "larger"
-  | "extraLarge";
+  | 'extraSmall'
+  | 'smaller'
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'larger'
+  | 'extraLarge';
 
-export type FontWeight =
-  | "bold"
-  | "regular"
-  | "light"
-  | "medium"
-  | "semiBold"
-  | "extraBold";
+export type FontWeight = 'bold' | 'regular' | 'light' | 'medium' | 'semiBold' | 'extraBold';
 
 const allFontSizes: Array<string> = [
-  "0.5rem",
-  "0.625rem",
-  "0.75rem",
-  "0.87rem",
-  "1rem",
-  "40px",
-  "64px",
+  '0.5rem',
+  '0.625rem',
+  '0.75rem',
+  '0.87rem',
+  '1rem',
+  '40px',
+  '64px',
 ];
 
 const allFontWeights: Array<number> = [700, 400, 300, 500, 600, 800];
