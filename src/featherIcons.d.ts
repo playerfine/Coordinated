@@ -4,6 +4,7 @@ declare module "feather-icons-react" {
     icon: string;
     size: string;
     fill?: string;
+    style?: React.CSSProperties;
     color?: string;
   }
   export default class FeatherIcon extends Component<Props> {}

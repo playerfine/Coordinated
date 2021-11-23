@@ -3,12 +3,17 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  extends: 'react-app',
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: ['./tsconfig.json'],
     ecmaFeatures: {
       jsx: true,
     },
@@ -18,7 +23,19 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    //   'prettier',
   ],
   rules: {
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'no-console': 'off',
+    // "react-hooks/rules-of-hooks": "error",
+    // "react-hooks/exhaustive-deps": "warn"
   },
 };
